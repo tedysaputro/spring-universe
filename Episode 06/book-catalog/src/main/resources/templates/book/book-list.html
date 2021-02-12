@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="eng" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Simple Book Catalog</title>
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Author</th>
+					<th>Description</th>
+				</tr>
+			<thead>
+			<tbody>
+				<tr th:each="book:${books}">
+					<td th:text="${book.title}"></td>
+					<td th:text="${book.author}"></td>
+					<td th:text="${book.description}"></td>
+				
+				</tr>
+			</tbody>
+		
+		</table>
+	</body>
+
+</html>

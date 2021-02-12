@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="eng" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Simple Book Catalog</title>
+</head>
+<body>
+	<form method="POST" th:action="@{/book/new}" th:object="${bookForm}">
+		<table>
+			<tr>
+				<td>Title :</td>
+				<td><input name="title" type="text" th:field="*{title}">
+				</td>
+			</tr>
+
+			<tr>
+				<td>Author :</td>
+				<td><input name="author" type="text" th:field="*{author}">
+				</td>
+			</tr>
+
+			<tr>
+				<td>Description :</td>
+				<td><textarea name="descriiption" rows="5" cols="20"
+						th:field="*{description}"></textarea></td>
+			</tr>
+			<tr>
+				<td>
+					<input type="submit" value="Submit">
+				</td>
+			</tr>
+		</table>
+
+	</form>
+</body>
+</html>
